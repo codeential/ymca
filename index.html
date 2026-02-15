@@ -651,49 +651,154 @@
        </div>
       </div><!-- Donation Form Card -->
       <div class="card-gradient rounded-3xl p-8 shadow-2xl">
-       <form id="donation-form" class="space-y-6">
-        <div class="text-center mb-6">
-         <h3 class="text-2xl font-bold text-ymca-darkblue mb-2">Donate Securely</h3>
-         <p class="text-gray-600">All donations are 80G tax exempt</p>
-        </div><!-- Quick Amount Selection -->
-        <div><label class="block text-sm font-medium text-gray-700 mb-3">Quick Select Amount</label>
-         <div class="grid grid-cols-4 gap-2"><button type="button" class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all" data-amount="5000">₹5,000</button> <button type="button" class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all" data-amount="10000">₹10,000</button> <button type="button" class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all" data-amount="25000">₹25,000</button> <button type="button" class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all" data-amount="50000">₹50,000</button>
-         </div>
-        </div><!-- Full Name -->
-        <div><label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label> <input type="text" id="fullName" name="fullName" required class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all" placeholder="Enter your full name">
-        </div><!-- Email -->
-        <div><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label> <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all" placeholder="your.email@example.com">
-        </div><!-- Mobile Number -->
-        <div><label for="mobile" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
-         <div class="flex"><span class="inline-flex items-center px-4 py-3 bg-gray-100 border-2 border-r-0 border-gray-200 rounded-l-xl text-gray-600 font-medium">+91</span> <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-r-xl focus:border-ymca-blue focus:outline-none transition-all" placeholder="9876543210">
-         </div>
-        </div><!-- Donation Amount -->
-        <div><label for="amount" class="block text-sm font-medium text-gray-700 mb-2">Donation Amount (₹) *</label>
-         <div class="relative"><span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-medium">₹</span> <input type="number" id="amount" name="amount" required min="100" class="form-input w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all" placeholder="Enter amount">
-         </div>
-        </div><!-- PAN Card (Conditional) -->
-        <div id="panCardSection" class="hidden"><label for="panCard" class="block text-sm font-medium text-gray-700 mb-2"> PAN Card Number * <span class="text-xs text-ymca-red ml-1">(Required for donations above ₹2,00,000)</span> </label> <input type="text" id="panCard" name="panCard" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all uppercase" placeholder="ABCDE1234F">
-        </div><!-- Terms Checkbox -->
-        <div class="flex items-start space-x-3"><input type="checkbox" id="terms" name="terms" required class="mt-1 w-5 h-5 text-ymca-blue border-gray-300 rounded focus:ring-ymca-blue"> <label for="terms" class="text-sm text-gray-600"> I agree to the <a href="#" class="text-ymca-blue hover:underline">Terms &amp; Conditions</a> and acknowledge that my donation is eligible for 80G tax exemption as per Income Tax Act. </label>
-        </div><!-- Submit Button --> <button type="submit" id="submitBtn" class="w-full py-4 bg-gradient-to-r from-ymca-red to-ymca-darkred text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-2">
-         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-         </svg><span>Proceed to Secure Payment</span> </button> <!-- Razorpay Badge -->
-        <div class="flex items-center justify-center space-x-4 pt-4 border-t border-gray-200">
-         <div class="flex items-center space-x-2 text-gray-500">
-          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg><span class="text-sm">Secure Payment via</span>
-         </div>
- <div>
-  <img 
-    src="razor2.png" 
-    alt="Razorpay Secure Payment"
-    class="h-10 w-auto"
-  >
-</div>
+     <form id="donation-form" class="space-y-6">
 
-        </div><!-- Security Notice -->
-        <p class="text-center text-xs text-gray-500">🔒 Your payment information is encrypted and secure. We never store your card details.</p>
-       </form>
+  <!-- Header -->
+  <div class="text-center">
+    <h3 class="text-xl sm:text-2xl font-bold text-ymca-darkblue mb-2">
+      Donate Securely
+    </h3>
+    <p class="text-gray-600 text-sm sm:text-base">
+      All donations are 80G tax exempt
+    </p>
+  </div>
+
+  <!-- Quick Select Amount -->
+  <div>
+    <label class="block text-sm font-medium text-gray-700 mb-3">
+      Quick Select Amount
+    </label>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <button type="button"
+        class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all"
+        data-amount="5000">₹5,000</button>
+
+      <button type="button"
+        class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all"
+        data-amount="10000">₹10,000</button>
+
+      <button type="button"
+        class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all"
+        data-amount="25000">₹25,000</button>
+
+      <button type="button"
+        class="amount-btn px-4 py-3 border-2 border-gray-200 rounded-xl font-semibold text-ymca-darkblue hover:border-ymca-blue hover:bg-ymca-blue/5 transition-all"
+        data-amount="50000">₹50,000</button>
+    </div>
+  </div>
+
+  <!-- Full Name -->
+  <div>
+    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">
+      Full Name *
+    </label>
+    <input type="text" id="fullName" required
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all"
+      placeholder="Enter your full name">
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+      Email Address *
+    </label>
+    <input type="email" id="email" required
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all"
+      placeholder="your.email@example.com">
+  </div>
+
+  <!-- Mobile Number -->
+  <div>
+    <label for="mobile" class="block text-sm font-medium text-gray-700 mb-2">
+      Mobile Number *
+    </label>
+
+    <div class="flex w-full">
+      <span class="inline-flex items-center px-4 py-3 bg-gray-100 border-2 border-r-0 border-gray-200 rounded-l-xl text-gray-600 font-medium">
+        +91
+      </span>
+      <input type="tel" id="mobile" required pattern="[0-9]{10}"
+        class="w-full px-4 py-3 border-2 border-gray-200 rounded-r-xl focus:border-ymca-blue focus:outline-none transition-all"
+        placeholder="9876543210">
+    </div>
+  </div>
+
+  <!-- Custom Donation Amount -->
+  <div>
+    <label for="amount" class="block text-sm font-medium text-gray-700 mb-2">
+      Donation Amount (₹) *
+    </label>
+
+    <div class="relative">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-medium">
+        ₹
+      </span>
+      <input type="number" id="amount" min="100" required
+        class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none transition-all"
+        placeholder="Enter amount">
+    </div>
+  </div>
+
+  <!-- PAN Card Section -->
+  <div id="panCardSection" class="hidden">
+    <label for="panCard" class="block text-sm font-medium text-gray-700 mb-2">
+      PAN Card Number *
+      <span class="text-xs text-ymca-red ml-1">
+        (Required above ₹2,00,000)
+      </span>
+    </label>
+
+    <input type="text" id="panCard"
+      pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-ymca-blue focus:outline-none uppercase"
+      placeholder="ABCDE1234F">
+  </div>
+
+  <!-- Terms -->
+  <div class="flex items-start space-x-3 text-xs sm:text-sm">
+    <input type="checkbox" required
+      class="mt-1 w-5 h-5 text-ymca-blue border-gray-300 rounded focus:ring-ymca-blue">
+
+    <label class="text-gray-600">
+      I agree to the
+      <a href="#" class="text-ymca-blue hover:underline">Terms & Conditions</a>
+      and acknowledge that my donation qualifies for 80G exemption.
+    </label>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit"
+    class="w-full py-3 sm:py-4 bg-gradient-to-r from-ymca-red to-ymca-darkred text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
+
+    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+    </svg>
+
+    <span>Proceed to Secure Payment</span>
+  </button>
+
+  <!-- Razorpay Badge -->
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 border-t border-gray-200">
+    <div class="flex items-center gap-2 text-gray-500 text-sm">
+      <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4"/>
+      </svg>
+      Secure Payment via
+    </div>
+
+    <img src="razor2.png" alt="Razorpay Secure Payment" class="h-8 sm:h-10 w-auto">
+  </div>
+
+  <!-- Security Note -->
+  <p class="text-center text-xs text-gray-500">
+    🔒 Your payment information is encrypted and secure.
+  </p>
+
+</form>
+
       </div>
      </div>
     </div>
@@ -832,7 +937,7 @@
       </div>
      </div>
     </div>
-    <p class="text-gray-400 md:text-center tracking-wide w-full flex pb-6 justify-center items-center">Made by <!-- -->&nbsp; <span class="text-[#ffc857] underline underline-offset-2"> Codeential Technologies</span></p>
+    <a target="_blank" href="https://codeential.com" class="text-gray-400 md:text-center tracking-wide w-full flex pb-6 justify-center items-center">Made by <!-- -->&nbsp; <span class="text-[#ffc857] underline underline-offset-2"> Codeential Technologies</span></a>
    </footer>
    
 
